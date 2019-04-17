@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: horovod-hello
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        k8s-app: horovod-hello
+    spec:
+      containers:
+      - name: horovod
+        image: horovod/horovod:0.16.1-tf1.12.0-torch1.0.0-mxnet1.4.0-py3.5
+        command: ["sleep","86400"]
+        env:
+          - name: PYTHONIOENCODING
+            value: "utf-8"
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+      #nodeSelector:
+      #      kubernetes.io/hostname: "node6"

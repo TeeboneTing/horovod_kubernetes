@@ -82,3 +82,5 @@ RUN apt-get install -y --no-install-recommends subversion && \
     rm -rf /examples/.svn
 
 WORKDIR "/examples"
+
+CMD horovodrun python keras_mnist_advanced.py

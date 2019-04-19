@@ -1,5 +1,5 @@
 # horovod_kubernetes
-How to run horovod example code by kubernetes. A tutorial code explained.
+How to run horovod example code by kubernetes (k8s). A tutorial code explained.
 
 # Dockerfile
 Copied from horovod orignal [dockerfile](https://github.com/horovod/horovod/blob/master/Dockerfile). I only use PyTorch and Tensorflow so far thus I removed MXNet part in this Dockerfile. You can actually use `horovod/horovod` image on dockerhub.

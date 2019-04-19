@@ -1,4 +1,4 @@
-# horovod_helloworld
+# horovod_kubernetes
 How to run horovod example code by kubernetes. A tutorial code explained.
 
 # Dockerfile

@@ -3,7 +3,7 @@ help:
 
 #DOCKER_FILE=Dockerfile
 
-all: build push
+all: build push_ubitus
 
 build:
 	docker build -t horovod .

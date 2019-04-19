@@ -1,5 +1,5 @@
 # horovod_helloworld
-Understanding Horovod by coding it
+How to run horovod example code by kubernetes. A tutorial code explained.
 
 # Dockerfile
 Copied from horovod orignal [dockerfile](https://github.com/horovod/horovod/blob/master/Dockerfile). I only use PyTorch and Tensorflow so far thus I removed MXNet part in this Dockerfile. You can actually use `horovod/horovod` image on dockerhub.
@@ -16,3 +16,5 @@ Run MPIJob on k8s. Please install [kubeflow MPI job](https://github.com/kubeflow
 * replicas: how many machines (workers) you want to use
 * resources: set how many GPUs you want to allocate for each machine.
 For example: `replica: 4` and `nvidia.com/gpu: 4` means 4 GPUs for each machine and running on 4 machines. (Total 16 GPUs in the k8s cluster.)
+## Command:
+`kubectl create -f horovod_example.yml`
